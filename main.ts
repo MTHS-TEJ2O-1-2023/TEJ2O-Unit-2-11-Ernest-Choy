@@ -15,12 +15,14 @@ basic.showIcon(IconNames.Happy)
 
 // on button A press
 input.onButtonPressed(Button.A, function () {
+  basic.clearScreen()
   basic.showString("1:" + (numberOne).toString())
   basic.showIcon(IconNames.Happy)
 })
 
 // on button B press
 input.onButtonPressed(Button.B, function () {
+  basic.clearScreen()
   basic.showString("2:" + (numberTwo).toString())
   basic.showIcon(IconNames.Happy)
 })
