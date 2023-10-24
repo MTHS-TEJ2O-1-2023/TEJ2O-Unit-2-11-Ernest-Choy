@@ -24,5 +24,4 @@ input.onGesture(Gesture.Shake, function() {
 
   else
     basic.showString(numberOne.toString() + ">" + (numberTwo.toString()))
-
 })
