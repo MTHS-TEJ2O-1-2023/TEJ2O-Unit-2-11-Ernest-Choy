@@ -1,8 +1,28 @@
 /* Copyright (c) 2020 MTHS All rights reserved
  *
- * Created by: Mr. Coxall
- * Created on: Sep 2020
- * This program ...
+ * Created by: Erenst
+ * Created on: Oct 2023
+ * This program generates two numbers
 */
 
-basic.showString('Hello, World!')
+const numberOne = randint(1, 99)
+const numberTwo = randint(1, 99)
+
+// on button A press
+input.onButtonPressed(Button.A, function() {
+  basic.showString(numberOne.toString())
+})
+
+// on button B press
+input.onButtonPressed(Button.B, function () {
+  basic.showString(numberTwo.toString())
+})
+
+input.onGesture(Gesture.Shake, function() {
+  if(numberOne < numberTwo)
+    basic.showString(numberOne.toString() + "<" + (numberTwo.toString()))
+
+  else
+    basic.showString(numberOne.toString() + ">" + (numberTwo.toString()))
+
+})
