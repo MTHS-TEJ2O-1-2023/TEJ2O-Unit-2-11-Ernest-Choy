@@ -32,10 +32,11 @@ input.onGesture(Gesture.Shake, function () {
   basic.clearScreen()
   if (numberOne < numberTwo) {
     basic.showString((numberOne).toString() + '<' + (numberTwo).toString())
-    }
+  }
+
   else {
     basic.showString((numberOne).toString() + '>' + (numberTwo).toString())
-    }
+  }
 
   basic.showIcon(IconNames.Sad)
 })
