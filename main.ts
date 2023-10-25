@@ -32,9 +32,8 @@ input.onGesture(Gesture.Shake, function () {
   basic.clearScreen()
   if (numberOne < numberTwo) {
     basic.showString((numberOne).toString() + '<' + (numberTwo).toString())
-  }
 
-  else {
+  } else {
     basic.showString((numberOne).toString() + '>' + (numberTwo).toString())
   }
 
