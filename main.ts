@@ -6,7 +6,7 @@
 */
 
 // variables
-const numberOne: number = randint(1, 99) 
+const numberOne: number = randint(1, 99)
 const numberTwo: number = randint(1, 99)
 
 // setup
@@ -16,14 +16,14 @@ basic.showIcon(IconNames.Happy)
 // on button A press
 input.onButtonPressed(Button.A, function () {
   basic.clearScreen()
-  basic.showString("1:" + (numberOne).toString())
+  basic.showString('1:' + (numberOne).toString())
   basic.showIcon(IconNames.Happy)
 })
 
 // on button B press
 input.onButtonPressed(Button.B, function () {
   basic.clearScreen()
-  basic.showString("2:" + (numberTwo).toString())
+  basic.showString('2:' + (numberTwo).toString())
   basic.showIcon(IconNames.Happy)
 })
 
@@ -31,11 +31,11 @@ input.onButtonPressed(Button.B, function () {
 input.onGesture(Gesture.Shake, function () {
   basic.clearScreen()
   if (numberOne < numberTwo) {
-    basic.showString((numberOne).toString() + "<" + (numberTwo).toString())
+    basic.showString((numberOne).toString() + '<' + (numberTwo).toString())
   }
   else {
-    basic.showString((numberOne).toString() + ">" + (numberTwo).toString())
+    basic.showString((numberOne).toString() + '>' + (numberTwo).toString())
   }
 
-basic.showIcon(IconNames.Sad)
+  basic.showIcon(IconNames.Sad)
 })
