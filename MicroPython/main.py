@@ -1,6 +1,6 @@
 """
-Created by: Mr. Coxall
-Created on: Sep 2020
+Created by: Ernest
+Created on: Oct 2023
 This module is a Micro:bit MicroPython program
 """
 
@@ -31,10 +31,11 @@ while True:
 
     # on Shake
     gesture = accelerometer.current_gesture()
-    if accelerometer.was_gesture("shake"):
+    if gesture == "shake":
         if numberOne < numberTwo:
             display.clear()
             display.scroll(str(numberOne) + "<" + str(numberTwo))
+            display.show(Image.SAD)
         else:
             display.scroll(str(numberOne) + ">" + str(numberTwo))
-    display.show(Image.SAD)
+            display.show(Image.SAD)
