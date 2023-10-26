@@ -5,23 +5,36 @@
  * This program generates two numbers
 */
 
-const numberOne = randint(1, 99)
-const numberTwo = randint(1, 99)
+// variables
+const numberOne: number = randint(1, 99)
+const numberTwo: number = randint(1, 99)
+
+// setup
+basic.clearScreen()
+basic.showIcon(IconNames.Happy)
 
 // on button A press
-input.onButtonPressed(Button.A, function() {
-  basic.showString(numberOne.toString())
+input.onButtonPressed(Button.A, function () {
+  basic.clearScreen()
+  basic.showString('1:' + (numberOne).toString())
+  basic.showIcon(IconNames.Happy)
 })
 
 // on button B press
 input.onButtonPressed(Button.B, function () {
-  basic.showString(numberTwo.toString())
+  basic.clearScreen()
+  basic.showString('2:' + (numberTwo).toString())
+  basic.showIcon(IconNames.Happy)
 })
 
-input.onGesture(Gesture.Shake, function() {
-  if(numberOne < numberTwo)
-    basic.showString(numberOne.toString() + "<" + (numberTwo.toString()))
+// on Shake
+input.onGesture(Gesture.Shake, function () {
+  basic.clearScreen()
+  if (numberOne < numberTwo) {
+    basic.showString((numberOne).toString() + '<' + (numberTwo).toString())
+  } else {
+    basic.showString((numberOne).toString() + '>' + (numberTwo).toString())
+  }
 
-  else
-    basic.showString(numberOne.toString() + ">" + (numberTwo.toString()))
+  basic.showIcon(IconNames.Sad)
 })
